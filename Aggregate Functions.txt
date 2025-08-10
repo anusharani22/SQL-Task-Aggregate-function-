@@ -1,0 +1,27 @@
+-- Task 4: Aggregate Functions and Grouping
+
+-- 1. Apply aggregate functions (SUM, AVG, COUNT, MAX, MIN)
+
+-- Total salary of all employees
+SELECT SUM(salary) AS total_salary
+FROM employees;
+
+-- Average salary of employees
+SELECT AVG(salary) AS average_salary
+FROM employees;
+
+-- Count of employees
+SELECT COUNT(*) AS total_employees
+FROM employees;
+
+-- Minimum and Maximum salary
+SELECT MIN(salary) AS min_salary, MAX(salary) AS max_salary
+FROM employees;
+
+----------------------------------------------------------
+-- 2. GROUP BY usage
+
+-- Total salary per department
+SELECT department_id, SUM(salary) AS total_salary
+FROM employees
+GROUP BY department_id;
